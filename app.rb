@@ -1,18 +1,15 @@
 require 'sinatra/base'
 
 class App < Sinatra::Base
-
- 
-  post '/team' do
-    erb :team
-  end
   
-   get '/newteam' do
-    @team = params
+  get '/newteam' do
     erb :newteam
   end
 
-  
+  post '/newteam' do
+    @team = params
+    erb :team
+  end
   
   
   
